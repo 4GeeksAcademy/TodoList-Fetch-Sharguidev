@@ -56,8 +56,7 @@ function ToDoListFetch() {
         createUser();
       })
   }
-  // setNewTask("Do math homework")
-  // setTasks([...tasks, newTask])
+ 
   const clearAll = () => {
     fetch("https://playground.4geeks.com/todo/users/gobando",{
       method: "DELETE"
@@ -82,7 +81,7 @@ function ToDoListFetch() {
   if(keyName === 'Enter' && newTask.trim() !== ''){
     createTask();
     
-      // setTasks([...tasks, jsonTask])
+  
     }
   }
   const handleDelete = (idToBeDeleted) => {
@@ -96,14 +95,14 @@ function ToDoListFetch() {
       }
     })
   }
+
+  
   return <div className="container">
     <h1>To Do List </h1>
     <input type="text" value={newTask} onChange={handleChange} onKeyDown={handleKeyDown}/>
-    {/* task.length ? is asking a question if tasks.length is true or false, 0 is false anything > 0 is true */}
     <p>{tasks.length ? `${tasks.length} item(s) left`:'No tasks, add a task'}</p> 
     <button onClick={clearAll} className="btn btn-danger  mb-3">Clear all</button>
     <ul>
-      {/* tasks == todos === [{label: string, id: 0, is_done: false }, {label: string, id: 0, is_done: false }] */}
       {tasks.map(   (todo, index) => (<li key={index}>
         {todo.label}
         <span onClick={() => handleDelete(todo.id)}> x</span>
