@@ -11,7 +11,7 @@ body {
     background-color: #9E2A2B;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 20px 5px #540B0E;
+    box-shadow: 0 0 20px  #540B0E;
   }
 
   
@@ -68,13 +68,11 @@ body {
   span:hover {
     color: red;
   }
-  
+
   h1 {
     text-align: center;
     color: rgba(255, 255, 255, 0.815);
     margin-bottom: 20px;
     font-size: 28px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }

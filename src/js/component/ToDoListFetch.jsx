@@ -75,6 +75,7 @@ function ToDoListFetch() {
       }
     })
   }
+  
   useEffect(() => {
     getTodos();
   }, []);
@@ -84,7 +85,7 @@ function ToDoListFetch() {
     setNewTask(inputValue) 
   }
 
-  
+
   const handleKeyDown = (event) => {
     let keyName = event.key
   if(keyName === 'Enter' && newTask.trim() !== ''){
