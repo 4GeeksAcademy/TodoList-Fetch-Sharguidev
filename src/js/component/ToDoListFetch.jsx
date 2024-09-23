@@ -72,10 +72,13 @@ function ToDoListFetch() {
     .then(resp =>{
       if(resp.ok){
         setTasks([])
+      } else {
+        throw new Error("There was a conflict Deleting everything");
       }
     })
+    .catch(error => {console.log(error); })
   }
-  
+
   useEffect(() => {
     getTodos();
   }, []);
