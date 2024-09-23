@@ -1,19 +1,6 @@
 
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
-
-
 body {
-    background-color: rgba(0, 0, 0, 0.911);
+    background-color: #fff3b0;
     color: white;
     font-family: 'Arial', sans-serif;
   }
@@ -21,17 +8,18 @@ body {
   .container {
     max-width: 500px;
     margin: 50px auto;
-    background-color: rgba(70, 70, 70, 0.402);
+    background-color: #9E2A2B;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px 5px #540B0E;
   }
+
   
   input[type="text"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    background-color:rgba(128, 128, 128, 0.194);
+    background-color:#6f1d1b;
     border: none;
     border-radius: 4px;
     color: white;
@@ -40,14 +28,13 @@ body {
   
   input[type="text"]:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #5c5c5c;
-
+  
   }
   
   p {
     margin-bottom: 20px;
     font-size: 18px;
-    color: gray;
+    color: black;
   }
   
   ul {
@@ -81,6 +68,7 @@ body {
   span:hover {
     color: red;
   }
+  
   h1 {
     text-align: center;
     color: rgba(255, 255, 255, 0.815);

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 function ToDoListFetch() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
+
+
+
   function createTask() {
 
     let jsonTask = { label: newTask, is_done: false };
@@ -21,6 +24,8 @@ function ToDoListFetch() {
         } else createUser();
       });
   }
+
+
   function createUser() {
     fetch("https://playground.4geeks.com/todo/users/gobando", {
       method: "POST",
@@ -41,6 +46,8 @@ function ToDoListFetch() {
       .catch(err => { console.log(err); })
 
   }
+
+
   function getTodos() {
     fetch("https://playground.4geeks.com/todo/users/gobando")
       .then(resp => {
@@ -73,9 +80,11 @@ function ToDoListFetch() {
   }, []);
 
   const handleChange = (event) => {
-    let inptvalue = event.target.value
-    setNewTask(inptvalue) 
+    let inputValue = event.target.value
+    setNewTask(inputValue) 
   }
+
+  
   const handleKeyDown = (event) => {
     let keyName = event.key
   if(keyName === 'Enter' && newTask.trim() !== ''){
@@ -84,6 +93,8 @@ function ToDoListFetch() {
   
     }
   }
+
+
   const handleDelete = (idToBeDeleted) => {
     fetch(`https://playground.4geeks.com/todo/todos/${idToBeDeleted}`,{
       method: "DELETE"
@@ -103,9 +114,9 @@ function ToDoListFetch() {
     <p>{tasks.length ? `${tasks.length} item(s) left`:'No tasks, add a task'}</p> 
     <button onClick={clearAll} className="btn btn-danger  mb-3">Clear all</button>
     <ul>
-      {tasks.map(   (todo, index) => (<li key={index}>
-        {todo.label}
-        <span onClick={() => handleDelete(todo.id)}> x</span>
+      {tasks.map(   (toDo, index) => (<li key={index}>
+        {toDo.label}
+        <span onClick={() => handleDelete(toDo.id)}> x</span>
       </li>)  ) } 
     </ul>
   </div>  
